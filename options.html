@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Time logging reminder — Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Time logging reminder</h1>
+      <p class="lede">
+        Choose where the reminder appears and what name to show instead of
+        <strong>X</strong>.
+      </p>
+
+      <section class="field">
+        <label for="appName">Log time in (shown as X)</label>
+        <input
+          id="appName"
+          type="text"
+          autocomplete="off"
+          placeholder="e.g. Harvest, Toggl, internal portal"
+        />
+      </section>
+
+      <section class="field">
+        <label class="check">
+          <input id="enabled" type="checkbox" />
+          Enable reminders
+        </label>
+      </section>
+
+      <section class="field">
+        <label for="extraMatches">Extra URL match patterns (one per line)</label>
+        <textarea
+          id="extraMatches"
+          rows="6"
+          spellcheck="false"
+          placeholder="https://app.example.com/*&#10;https://*.notion.so/*"
+        ></textarea>
+        <p class="hint">
+          Use Chrome
+          <a
+            href="https://developer.chrome.com/docs/extensions/develop/concepts/match-patterns"
+            target="_blank"
+            rel="noopener noreferrer"
+            >match patterns</a
+          >. You will be asked to allow each host the first time you save.
+        </p>
+      </section>
+
+      <p id="status" class="status" hidden></p>
+
+      <div class="actions">
+        <button id="save" type="button" class="btn primary">Save</button>
+      </div>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

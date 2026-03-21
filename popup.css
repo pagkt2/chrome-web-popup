@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  min-width: 280px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-size: 13px;
+  color: #0f172a;
+}
+
+.popup {
+  padding: 14px;
+}
+
+.text {
+  margin: 0 0 12px;
+  line-height: 1.45;
+  color: #334155;
+}
+
+.btn {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #f1f5f9;
+}

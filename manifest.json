@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Time logging reminder",
+  "version": "1.0.0",
+  "description": "Shows a reminder to log your time on Google Docs and other sites you choose.",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": [
+    "https://docs.google.com/*",
+    "https://drive.google.com/*"
+  ],
+  "optional_host_permissions": ["https://*/*", "http://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Time logging reminder",
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}

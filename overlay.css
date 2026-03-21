@@ -1,0 +1,75 @@
+#time-logging-reminder-root {
+  all: initial;
+  position: fixed;
+  inset: 0;
+  z-index: 2147483646;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  pointer-events: auto;
+}
+
+#time-logging-reminder-root *,
+#time-logging-reminder-root *::before,
+#time-logging-reminder-root *::after {
+  box-sizing: border-box;
+}
+
+#time-logging-reminder-root .tlr-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(2px);
+}
+
+#time-logging-reminder-root .tlr-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(92vw, 400px);
+  padding: 20px 20px 16px;
+  border-radius: 12px;
+  background: #fff;
+  color: #0f172a;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.2);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+#time-logging-reminder-root .tlr-title {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+#time-logging-reminder-root .tlr-body {
+  margin: 0 0 18px;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+#time-logging-reminder-root .tlr-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+#time-logging-reminder-root .tlr-btn {
+  appearance: none;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#time-logging-reminder-root .tlr-btn-primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+#time-logging-reminder-root .tlr-btn-primary:hover {
+  background: #1d4ed8;
+}
