@@ -1,12 +1,21 @@
 {
   "manifest_version": 3,
   "name": "Time logging reminder",
-  "version": "1.0.0",
-  "description": "Shows a reminder to log your time on Google Docs and other sites you choose.",
+  "version": "1.0.2",
+  "description": "Shows a reminder to log your time on Google Sheets, finance sites, and other URLs you choose.",
   "permissions": ["storage", "scripting"],
   "host_permissions": [
-    "https://docs.google.com/*",
-    "https://drive.google.com/*"
+    "https://docs.google.com/spreadsheets/*",
+    "https://*.fidelity.com/*",
+    "https://*.usbank.com/*",
+    "https://*.schwab.com/*",
+    "https://humaninterest.com/*",
+    "https://*.humaninterest.com/*",
+    "https://*.tradingview.com/*",
+    "https://twitter.com/*",
+    "https://*.twitter.com/*",
+    "https://x.com/*",
+    "https://*.x.com/*"
   ],
   "optional_host_permissions": ["https://*/*", "http://*/*"],
   "background": {

@@ -2,7 +2,7 @@
 
 [![Repository](https://img.shields.io/badge/GitHub-pagkt2%2Fchrome--web--popup-blue)](https://github.com/pagkt2/chrome-web-popup)
 
-A small **Manifest V3** Chrome extension that shows an on-page reminder on Google Docs, Google Drive, and any other URLs you add—so you remember to **log how much time** you spend in the tool you name (for example Harvest, Toggl, or an internal tracker).
+A small **Manifest V3** Chrome extension that shows an on-page reminder on **Google Sheets**, finance sites, and any other URLs you add—so you remember to **log how much time** you spend in the tool you name (for example Harvest, Toggl, or an internal tracker).
 
 **Repository:** [github.com/pagkt2/chrome-web-popup](https://github.com/pagkt2/chrome-web-popup)
 
@@ -34,10 +34,15 @@ You do **not** need to edit code for extra websites.
 
 Out of the box, these patterns are always included (see `DEFAULT_MATCHES` in `background.js`):
 
-- `https://docs.google.com/*`
-- `https://drive.google.com/*`
+- Google Sheets: `https://docs.google.com/spreadsheets/*` (not Docs or Drive)
+- Fidelity: `https://*.fidelity.com/*`
+- U.S. Bank: `https://*.usbank.com/*`
+- Schwab: `https://*.schwab.com/*`
+- Human Interest (401k): `https://humaninterest.com/*`, `https://*.humaninterest.com/*`
+- TradingView: `https://*.tradingview.com/*`
+- Twitter / X: `https://twitter.com/*`, `https://*.twitter.com/*`, `https://x.com/*`, `https://*.x.com/*`
 
-Change those only if you want different **defaults** for every install from this repo.
+Change those only if you want different **defaults** for every install from this repo. If a bank or broker uses another domain (for example Fidelity NetBenefits on `netbenefits.com`), add it under **Extra URL match patterns** in settings.
 
 ## Project layout
 

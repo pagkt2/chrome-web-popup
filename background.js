@@ -1,8 +1,20 @@
 const SCRIPT_ID = "time-logging-reminder";
 
 const DEFAULT_MATCHES = [
-  "https://docs.google.com/*",
-  "https://drive.google.com/*",
+  /* Google Sheets only (not Docs or Drive) */
+  "https://docs.google.com/spreadsheets/*",
+  /* Finance & investing */
+  "https://*.fidelity.com/*",
+  "https://*.usbank.com/*",
+  "https://*.schwab.com/*",
+  "https://humaninterest.com/*",
+  "https://*.humaninterest.com/*",
+  "https://*.tradingview.com/*",
+  /* Social */
+  "https://twitter.com/*",
+  "https://*.twitter.com/*",
+  "https://x.com/*",
+  "https://*.x.com/*",
 ];
 
 async function getAllMatches() {
@@ -17,9 +29,7 @@ async function getAllMatches() {
 async function filterPermittedMatches(patterns) {
   const out = [];
   for (const pattern of patterns) {
-    const origin = matchPatternToOrigin(pattern);
-    if (!origin) continue;
-    const granted = await chrome.permissions.contains({ origins: [origin] });
+    const granted = await chrome.permissions.contains({ origins: [pattern] });
     if (granted) out.push(pattern);
   }
   return out;
@@ -46,19 +56,6 @@ async function ensureContentScripts() {
       runAt: "document_idle",
     },
   ]);
-}
-
-/** Best-effort: derive an origin permission entry from a match pattern. */
-function matchPatternToOrigin(pattern) {
-  try {
-    const m = pattern.match(/^(\*|https?|file|ftp):\/\/([^/]+)\//);
-    if (!m) return null;
-    const scheme = m[1] === "*" ? "https" : m[1];
-    const host = m[2];
-    return `${scheme}://${host}/*`;
-  } catch {
-    return null;
-  }
 }
 
 chrome.runtime.onInstalled.addListener(() => {
