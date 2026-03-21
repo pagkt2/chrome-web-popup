@@ -1,9 +1,10 @@
 const SCRIPT_ID = "time-logging-reminder";
 
 const DEFAULT_MATCHES = [
-  /* Google Docs & Sheets (not Drive or other apps) */
+  /* Google Docs, Sheets, NotebookLM (not Drive or other apps) */
   "https://docs.google.com/document/*",
   "https://docs.google.com/spreadsheets/*",
+  "https://notebooklm.google.com/*",
   /* Finance & investing */
   "https://*.fidelity.com/*",
   "https://*.usbank.com/*",

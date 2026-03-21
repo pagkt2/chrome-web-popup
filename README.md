@@ -2,7 +2,7 @@
 
 [![Repository](https://img.shields.io/badge/GitHub-pagkt2%2Fchrome--web--popup-blue)](https://github.com/pagkt2/chrome-web-popup)
 
-A small **Manifest V3** Chrome extension that shows an on-page reminder on **Google Docs**, **Google Sheets**, finance sites, and any other URLs you add—so you remember to **log how much time** you spend in the tool you name (for example Harvest, Toggl, or an internal tracker).
+A small **Manifest V3** Chrome extension that shows an on-page reminder on **Google Docs**, **Google Sheets**, **NotebookLM**, finance sites, and any other URLs you add—so you remember to **log how much time** you spend in the tool you name (for example Harvest, Toggl, or an internal tracker).
 
 **Repository:** [github.com/pagkt2/chrome-web-popup](https://github.com/pagkt2/chrome-web-popup)
 
@@ -34,7 +34,7 @@ You do **not** need to edit code for extra websites.
 
 Out of the box, these patterns are always included (see `DEFAULT_MATCHES` in `background.js`):
 
-- Google Docs & Sheets: `https://docs.google.com/document/*`, `https://docs.google.com/spreadsheets/*` (not Drive or other Google apps)
+- Google Docs, Sheets & NotebookLM: `https://docs.google.com/document/*`, `https://docs.google.com/spreadsheets/*`, `https://notebooklm.google.com/*` (not Drive or other Google apps)
 - Fidelity: `https://*.fidelity.com/*`
 - U.S. Bank: `https://*.usbank.com/*`
 - Schwab: `https://*.schwab.com/*`
