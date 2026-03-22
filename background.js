@@ -5,6 +5,8 @@ const DEFAULT_MATCHES = [
   "https://docs.google.com/document/*",
   "https://docs.google.com/spreadsheets/*",
   "https://notebooklm.google.com/*",
+  /* YouTube (www, mobile, Music, etc.) */
+  "https://*.youtube.com/*",
   /* Finance & investing */
   "https://*.fidelity.com/*",
   "https://*.usbank.com/*",
